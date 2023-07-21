@@ -13,9 +13,14 @@
 		BB96CF952A6A32DE0016AC85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB96CF932A6A32DE0016AC85 /* Main.storyboard */; };
 		BB96CF972A6A32E10016AC85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB96CF962A6A32E10016AC85 /* Assets.xcassets */; };
 		BB96CF9A2A6A32E10016AC85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB96CF982A6A32E10016AC85 /* LaunchScreen.storyboard */; };
+		BB96CFAE2A6A65E10016AC85 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96CFAD2A6A65E10016AC85 /* Model.swift */; };
+		BB96CFB02A6A676E0016AC85 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB96CFAF2A6A676E0016AC85 /* UserService.swift */; };
+		C841B0CE0C4EAA1BDB9CBF11 /* Pods_testingapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EAE8138BB1E7B26D7A5DD1 /* Pods_testingapi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79EAE8138BB1E7B26D7A5DD1 /* Pods_testingapi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testingapi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AEE9BC7C5D2806902B14285 /* Pods-testingapi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testingapi.debug.xcconfig"; path = "Target Support Files/Pods-testingapi/Pods-testingapi.debug.xcconfig"; sourceTree = "<group>"; };
 		BB96CF8A2A6A32DE0016AC85 /* testingapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testingapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB96CF8D2A6A32DE0016AC85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB96CF8F2A6A32DE0016AC85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		BB96CF962A6A32E10016AC85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB96CF992A6A32E10016AC85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB96CF9B2A6A32E10016AC85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB96CFAD2A6A65E10016AC85 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BB96CFAF2A6A676E0016AC85 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		E2EC8619482BB58E0CE83EA3 /* Pods-testingapi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testingapi.release.xcconfig"; path = "Target Support Files/Pods-testingapi/Pods-testingapi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C841B0CE0C4EAA1BDB9CBF11 /* Pods_testingapi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14710588324BFB465FCA3CD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79EAE8138BB1E7B26D7A5DD1 /* Pods_testingapi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BEDD136344EB403AE09D74F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AEE9BC7C5D2806902B14285 /* Pods-testingapi.debug.xcconfig */,
+				E2EC8619482BB58E0CE83EA3 /* Pods-testingapi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BB96CF812A6A32DE0016AC85 = {
 			isa = PBXGroup;
 			children = (
 				BB96CF8C2A6A32DE0016AC85 /* testingapi */,
 				BB96CF8B2A6A32DE0016AC85 /* Products */,
+				6BEDD136344EB403AE09D74F /* Pods */,
+				14710588324BFB465FCA3CD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +91,8 @@
 				BB96CF962A6A32E10016AC85 /* Assets.xcassets */,
 				BB96CF982A6A32E10016AC85 /* LaunchScreen.storyboard */,
 				BB96CF9B2A6A32E10016AC85 /* Info.plist */,
+				BB96CFAD2A6A65E10016AC85 /* Model.swift */,
+				BB96CFAF2A6A676E0016AC85 /* UserService.swift */,
 			);
 			path = testingapi;
 			sourceTree = "<group>";
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB96CF9E2A6A32E10016AC85 /* Build configuration list for PBXNativeTarget "testingapi" */;
 			buildPhases = (
+				42CEBE7B4481E9998BD9117B /* [CP] Check Pods Manifest.lock */,
 				BB96CF862A6A32DE0016AC85 /* Sources */,
 				BB96CF872A6A32DE0016AC85 /* Frameworks */,
 				BB96CF882A6A32DE0016AC85 /* Resources */,
+				9510CA563812BC0F6E80DD27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +165,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42CEBE7B4481E9998BD9117B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testingapi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9510CA563812BC0F6E80DD27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testingapi/Pods-testingapi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testingapi/Pods-testingapi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testingapi/Pods-testingapi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB96CF862A6A32DE0016AC85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BB96CF922A6A32DE0016AC85 /* ViewController.swift in Sources */,
+				BB96CFB02A6A676E0016AC85 /* UserService.swift in Sources */,
 				BB96CF8E2A6A32DE0016AC85 /* AppDelegate.swift in Sources */,
 				BB96CF902A6A32DE0016AC85 /* SceneDelegate.swift in Sources */,
+				BB96CFAE2A6A65E10016AC85 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +358,7 @@
 		};
 		BB96CF9F2A6A32E10016AC85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AEE9BC7C5D2806902B14285 /* Pods-testingapi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,14 +378,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ankur.teksun.testingapi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		BB96CFA02A6A32E10016AC85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2EC8619482BB58E0CE83EA3 /* Pods-testingapi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -328,9 +409,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ankur.teksun.testingapi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
